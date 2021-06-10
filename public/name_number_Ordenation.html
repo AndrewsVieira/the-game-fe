@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenação JavaScript</title>
+</head>
+<body>
+    <style>
+        #idTabela, th{
+            border: 1px solid black;
+            margin-left: 10px;
+        };
+
+    </style>
+    <table id="idTabela">
+        <tr>
+            <th> Aluno</th>
+            <th> Pontos</th>
+        </tr>
+    </table>
+
+<script >
+      var nomes = ["Victor" , "Maria", "Bruna" , "Vitória" , "Jair", "Camila" , "Andrews" , "Alisson", "Junior" , "Ana"];
+      var pontos = [120,130,180,100,30,33,55,77,85,10];
+    
+    function ordenaPontos(a,b){
+        return a-b
+    }
+    pontos.sort(ordenaPontos);    
+   
+    nomes.reverse();
+    nomes.sort();
+    
+    for(i=0;i<nomes.length;i++){
+        for(i=0;i<pontos.length; i++){
+           document.write(nomes[i]+ " ------>");
+           document.write(pontos[i] + " <br/> ");
+        }
+    }
+    </script>
+</body>
+</html>
+
+
+
