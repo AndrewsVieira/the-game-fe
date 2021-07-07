@@ -47,8 +47,9 @@ code {
   text-align: center;
 
 }
-.question{
+.quest{
  padding: 25px;
+
 }
 .textArea{
   position: relative;
@@ -76,9 +77,7 @@ code {
   margin-top: 10px;
 }
 
-.nav{
-  display: inline;
-}
+
 
 .header{
   background:#00bbbd;
@@ -86,5 +85,6 @@ code {
   position: relative;
   left: 0;
   border-color: red ;
+  padding: 6px;
   
 }

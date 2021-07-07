@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from 'react';
-import { Table, Navbar, NavbarBrand } from 'reactstrap';
+import { Table} from 'reactstrap';
 import { rankingRequest } from '../pages/ranking/service/rankingService';
 import '../index.css';
 import Header from './header';
@@ -17,7 +17,7 @@ export default function Ranking() {
   return (
     <Container>
        <Header />
-    <Table className="rankingPanel" xs="auto" >
+    <Table striped className="rankingPanel" xs="auto" >
       <thead>
         <tr >
           <th onClick={() => setOption(2)} scope="row" >Nome</th>

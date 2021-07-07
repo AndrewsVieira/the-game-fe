@@ -4,10 +4,9 @@ import '../index.css';
 export default function Header() {
     return (
         <Container className="header">
-        <Navbar className="nav" light expand="md">
+        <Navbar light>
           <NavbarBrand href="/question">Jogar</NavbarBrand>
           <NavbarBrand href="/ranking">Ranking</NavbarBrand>
-
         </Navbar>
       </Container>
     );

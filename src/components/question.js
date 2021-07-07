@@ -1,9 +1,9 @@
 import { React, useState, useEffect } from 'react';
-import { Container, Navbar, NavbarBrand, Button } from 'react-bootstrap';
+import { } from 'react-bootstrap';
 import { createAnswer } from '../pages/answer/answerService/answerService'
 import { questionRequest } from '../pages/question/service/questionService'
 import '../index.css';
-import { InputGroup, Label, InputGroupText, Input, FormGroup, Jumbotron } from 'reactstrap';
+import { Container,InputGroup, Label, Input, FormGroup, Jumbotron, Button, Row, Col} from 'reactstrap';
 import Queue from '../utils/queue';
 import Header from './header';
 
@@ -26,8 +26,9 @@ export default function QuestionPanel() {
   return (
     <Container>
       <Header />
-      <div className="inform">
-        <Button onClick={async () => {
+      <br />
+      <Row>
+        <Col sm="1" md={{offset:10}}><Button outline color="danger" className="buttonNext" onClick={async () => {
           console.log("QUESTION", question);
           let data = await createAnswer()
 
@@ -38,13 +39,15 @@ export default function QuestionPanel() {
             };
           }
 
-        }}>Next</Button>
+        }}>Próxima</Button></Col>
+      </Row>
+      
+      <FormGroup className="inform">
         <Jumbotron>
-          <p className="questions">{
-            // question && question.question
-          }</p>
+          <Label className="quest">{
+            // question && question.question 
+          }Questão Que ira ser respondida</Label>
         </Jumbotron>
-        <br /><br />
         <Jumbotron>
 
           <InputGroup xs="auto">
@@ -100,7 +103,7 @@ export default function QuestionPanel() {
             />
           </InputGroup>
         </Jumbotron>
-      </div>
+      </FormGroup>
       <footer />
     </Container>
   );
