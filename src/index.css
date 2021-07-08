@@ -36,23 +36,7 @@ code {
   color: 1px solid black;
   font-size: 20px;
 }
-.inform{
-  position: relative;
-  margin: auto;
-  padding-top: 105px; 
-  min-width: 100%;
-  max-height: 100%;
-  text-align: center;
 
-}
-.question{
-  position: relative;
-  text-align: center;
-  background-color: #ffffff;
-  opacity: 0.8;
-  font-size: 25px;
-  color: #000000
-}
 .textArea{
   position: relative;
   margin: auto;
@@ -74,18 +58,31 @@ code {
   font-size: 25px;
   color: #000000;
 }
-
+.question{
+  position: relative;
+  text-align: center;
+  background-color: #ffffff;
+  opacity: 0.9;
+  font-size: 22px;
+  color: #000000;
+  border-radius: 25px;
+  padding-bottom: 1px;
+  padding-top: 10px;
+  margin-left: 10px;
+  
+}
+.quest{
+  margin-left: -12px;
+}
 .alternative {
   position: relative;
   text-align: center;
   background-color: #ffffff;
-  opacity: 0.8;
-  font-size: 20px;
-  color: #000000
-}
+  font-size: 18px;
+  color: #000000;
+  border-radius: 25px;
+  margin-left: 10px;
 
-.nav{
-  display: inline;
 }
 
 .header{
@@ -124,4 +121,19 @@ code {
   margin: auto;
   padding:auto;
   text-align: center; 
+}
+
+.space{
+  flex: 1;
+}
+.fundo{
+  background-color: white;
+  margin-left: 8px;
+  padding: 8.8px;
+  border-radius: 15px;
+  opacity: 0.9;
+}
+
+.center{
+  text-align: center;
 }

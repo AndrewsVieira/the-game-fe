@@ -29,30 +29,29 @@ export default class QuestionPanel extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container className="center">
         <Header />
-        <div className="inform">
-          <Jumbotron>
-            <p className="question">
+        <br /><br />
+          <Jumbotron className="question">
+            <p className="quest">
               {this.state && this.state.question && this.state.question.question}
             </p>
           </Jumbotron>
           <br /><br />
-          <Jumbotron  >
-
+          <Jumbotron className="fundo">
             {this.state && this.state.question && this.state.question.alternatives ?
               this.state.question.alternatives.map(row => {
                 return (
                   <InputGroup xs="auto">
                     <FormGroup check >
-                      <Label check className="alternative"> {row && row.alternative}
+                      <p check className="alternative"> {row && row.alternative}
                         <Input type="radio" name="radio1" onChange={e => {
                           this.setState({
                             alternative: row.id
                           })
                           console.log("radio 1", row.id)
                         }} />
-                      </Label>
+                      </p>
                     </FormGroup>
                   </InputGroup>
                 )
@@ -87,7 +86,6 @@ export default class QuestionPanel extends React.Component {
               }
             }
           }}>Próximo</Button>
-        </div>
         <Footer />
       </Container>
     );
